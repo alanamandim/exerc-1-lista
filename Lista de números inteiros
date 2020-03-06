@@ -1,0 +1,27 @@
+#include<iostream>
+#include<list>
+#include <stdlib.h>     /* srand, rand */
+
+
+using namespace std;
+int main() {
+    list<int> numeros;
+    int i,x;
+
+    //printf("Gerando 10 valores aleatorios:\n\n");
+
+    for (i = 0; i < 10; i++)
+    {
+        x=rand() % 100;
+        numeros.push_back(x);
+    }
+    auto it=numeros.begin();
+    cout<<*it;
+
+    for (it++; it != numeros.end(); it++) {
+            cout << ','<< *it;
+
+
+    }
+    return 0;
+}
